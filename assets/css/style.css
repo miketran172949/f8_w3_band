@@ -81,10 +81,30 @@ html{
     line-height: 46px;
 }
 
+
 #slider{
     margin-top: 46px;
-    background-color: bisque;
-    min-height: 333px;
+    padding-top: 50%;
+    background: url('/assets/img/slider.jpg') top center / cover no-repeat;
+    position: relative;
+    z-index: -1;
+}
+#slider .text-content{
+    color:#fff;
+    position: absolute;
+    bottom:47px;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.text-content .text-heading{
+    margin: 15px 0;
+    font-weight:500;
+    font-size: 24px;
+}
+.text-content .text-description{
+    margin: 10px 0;
+    font-size: 15px;
 }
 #content{
     height:1000px;
