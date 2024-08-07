@@ -8,10 +8,28 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 .text-white{
-    color: #fff;
+    color: #fff !important;
 }
 .clear{
-    clear: both;
+    clear: both !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-2{
+    width:50% !important;
+}
+.col-3{
+    width:33.33333% !important;
+}
+.text-center{
+    text-align: center !important;
 }
 #header{
     height: 46px;
@@ -142,11 +160,6 @@ html{
     margin-top:48px;
     overflow: hidden;
 }
-#content .member-item{
-    float:left;
-    width:calc(100%/3);
-    text-align: center;
-}
 #content .member-name{
     font-size: 15px;
     
@@ -189,12 +202,10 @@ html{
 }
 /* Place */
 .place-list{
-    margin: 32px -8px 48px;
+    margin-top: 32px;
+    margin-bottom: 48px;
 }
 .place-item{
-    float:left;
-    width:calc(100%/3);
-    padding:0 8px;
     padding-bottom: 48px;
 }
 .place-img{
