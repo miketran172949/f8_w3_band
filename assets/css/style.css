@@ -33,13 +33,13 @@ html{
     padding-right: 8px;
 }
 .col-full{
-    width:100% !important;
+    width:100%;
 }
 .col-2{
-    width:50% !important;
+    width:50%;
 }
 .col-3{
-    width:33.33333% !important;
+    width:33.33333%;
 }
 .text-center{
     text-align: center !important;
@@ -67,7 +67,7 @@ html{
     top:0;
     left:0;
     right:0;
-    overflow: hidden;
+    z-index: 1;
 }
 #nav{
     display: inline-block;
@@ -249,7 +249,7 @@ html{
 }
 /* Place */
 .place-list{
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 48px;
 }
 .place-item{
@@ -425,14 +425,46 @@ html{
 
 /* Mobile */
 @media (max-width: 740px){
-    
+    .s-col-full{
+        width:100%;
+    }
     #nav > li{
         display:block;
+    }
+    #header{
+        overflow: hidden;
     }
     #header .search-btn{
         display: none;
     }
     #header .mobile-menu-btn{
         visibility: visible;
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    #nav{
+        display: block;
+    }
+    #nav > li{
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+    #content .member-item{
+        margin-top: 30px;
+        width:100%;
+    }
+    #content .member-img{
+        width: 60%;
     }
 }
