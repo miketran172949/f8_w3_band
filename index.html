@@ -36,6 +36,9 @@
                 <i class="search-icon ti-search"></i>
             </div>
             <!-- End Seach Button -->
+             <div id = "mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+             </div>
         </div>
         <!-- Begin Slider -->
         <div id="slider">
@@ -236,6 +239,28 @@
         modalContainer.addEventListener('click',function(event){
             event.stopPropagation()
         })
+
+        // Responsive Mobile Menu
+        const header= document.getElementById('header')
+        const mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = header.clientHeight;
+        
+        mobileMenu.onclick= function(){
+            const isClose = header.clientHeight === headerHeight;
+            if(isClose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null;
+            }
+        }
+        // Auto close when chose the menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i=0; i < menuItems.length;i++){
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(){
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 </html>
