@@ -425,8 +425,9 @@ html{
 
 /* Mobile */
 @media (max-width: 740px){
+    .s-full-width,
     .s-col-full{
-        width:100%;
+        width:100% !important;
     }
     #nav > li{
         display:block;
@@ -466,5 +467,11 @@ html{
     }
     #content .member-img{
         width: 60%;
+    }
+    .contact-form{
+        margin-top: 16px;
+    }
+    .contact-email{
+        margin-top: 8px;
     }
 }
